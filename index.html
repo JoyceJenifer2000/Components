@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Motor Finance Redress</title>
+<title>Network Application</title>
 </head>
 <body>
-    <script src='https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js' ></script>
-    <pega-embed id='theEmbed' action='openAssignment' assignmentID='' themeID='pzAries' casePage='assignment' appAlias='finance-redress' pegaServerUrl='https://areteans-i25-plf.pegatsdemo.com/prweb/' autoReauth='true' authService='pega' userIdentifier='Joyce' password='cnVsZXM=' clientId='13718990074089488661' style='width:100%'>
+    <script src='https://areteans01.pegalabs.io/prweb/PRRestService/c11nsvc/v1/pega-embed.js' ></script>
+    <pega-embed id='theEmbed' action='openAssignment' assignmentID='' themeID='EndeavourEnergy' casePage='assignmentWithStages' appAlias='network-applications' pegaServerUrl='https://areteans01.pegalabs.io/prweb/' autoReauth='true' authService='pega' userIdentifier='NetworkGit' password='cnVsZXM=' clientId='72954902205554958023' style='width:100%'>
     </pega-embed>
     <script>
-        const getCaseIdEndpoint = "https://areteans-i25-plf.pegatsdemo.com/prweb/api/DynamicAssignment/v1/getDynamicId";
+        const getCaseIdEndpoint = "https://areteans01.pegalabs.io/prweb/api/DynamicCase/v1/getDynamicId";
         async function fetchCaseId() {
                 const response = await fetch(getCaseIdEndpoint, {
                     method: "GET",
