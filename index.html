@@ -5,9 +5,9 @@
     <title>Motor Finance Redress</title>
 </head>
 <body>
-    <script src='https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js'></script>
+    <script src="https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js"></script>
 
-    <!-- Placeholder div for dynamically injecting pega-embed -->
+    <!-- We will inject the embed component here dynamically -->
     <div id="embedContainer"></div>
 
     <script>
@@ -19,36 +19,40 @@
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
-                        // Add auth headers here if needed
                     }
                 });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch AssignmentID");
+                }
 
                 const data = await response.json();
                 const caseId = data.AssignmentID;
 
-                // Inject new pega-embed element
+                // Inject only AFTER the ID is fetched
                 document.getElementById("embedContainer").innerHTML = `
                     <pega-embed 
-                        action='openAssignment' 
-                        assignmentID='${caseId}' 
-                        themeID='pzAries' 
-                        casePage='assignment' 
-                        appAlias='finance-redress' 
-                        pegaServerUrl='https://areteans-i25-plf.pegatsdemo.com/prweb/' 
-                        autoReauth='true' 
-                        authService='pega' 
-                        userIdentifier='Joyce' 
-                        password='cnVsZXM=' 
-                        clientId='13718990074089488661' 
-                        style='width:100%'>
+                        id="theEmbed"
+                        action="openAssignment"
+                        assignmentID="${caseId}"
+                        themeID="pzAries"
+                        casePage="assignment"
+                        appAlias="finance-redress"
+                        pegaServerUrl="https://areteans-i25-plf.pegatsdemo.com/prweb/"
+                        autoReauth="true"
+                        authService="pega"
+                        userIdentifier="Joyce"
+                        password="cnVsZXM="
+                        clientId="13718990074089488661"
+                        style="width:100%">
                     </pega-embed>
                 `;
             } catch (error) {
-                console.error("Failed to fetch case ID:", error);
+                console.error("Error fetching Assignment ID:", error);
             }
         }
 
-        fetchCaseId();
+        window.onload = fetchCaseId;
     </script>
 </body>
 </html>
