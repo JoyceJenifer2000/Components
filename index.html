@@ -1,75 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motor Finance Redress</title>
-  <script src="https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Finance Redress</title>
 </head>
 <body>
-  <h2>Loading your assignment...</h2>
-  <div id="embedContainer">Please wait...</div>
-
-  <script>
-    // CONFIG SECTION
-    const pegaConfig = {
-      apiEndpoint: "https://areteans-i25-plf.pegatsdemo.com/prweb/api/DynamicAssignment/v1/getDynamicId",
-      pegaServerUrl: "https://areteans-i25-plf.pegatsdemo.com/prweb/",
-      user: "Joyce",
-      password: "cnVsZXM=", // base64-encoded: 'rules'
-      clientId: "13718990074089488661",
-      appAlias: "finance-redress",
-      themeID: "pzAries"
-    };
-
-    async function fetchAssignmentAndEmbed() {
-      try {
-        const response = await fetch(pegaConfig.apiEndpoint, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json"
-            // If needed, you can add Authorization header here
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error(`Failed to fetch assignment ID: ${response.status}`);
+    <script src='https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js' ></script>
+    <pega-embed id='theEmbed' action='openAssignment' assignmentID='' themeID='pzAries' casePage='assignment' appAlias='finance-redress' pegaServerUrl='https://areteans-i25-plf.pegatsdemo.com/prweb/' autoReauth='true' authService='pega' userIdentifier='Joyce' password='cnVsZXM=' clientId='13718990074089488661' style='width:100%'>
+    </pega-embed>
+    <script>
+        const getCaseIdEndpoint = "https://areteans-i25-plf.pegatsdemo.com/prweb/api/DynamicAssignment/v1/getDynamicId";
+        async function fetchCaseId() {
+                const response = await fetch(getCaseIdEndpoint, {
+                    method: "GET",
+                    header: {}
+                });
+                    const data = await response.json();
+                    const caseId = data.AssignmentID;
+                    let embedElement = document.getElementById('theEmbed');
+                    embedElement.setAttribute("assignmentID", caseId);
         }
-
-        const data = await response.json();
-
-        const assignmentID = data?.AssignmentID;
-
-        if (!assignmentID) {
-          document.getElementById("embedContainer").innerText = "No assignment ID returned.";
-          return;
-        }
-
-        // Inject pega-embed only after ID is ready
-        document.getElementById("embedContainer").innerHTML = `
-          <pega-embed
-            id="theEmbed"
-            action="openAssignment"
-            assignmentID="${assignmentID}"
-            themeID="${pegaConfig.themeID}"
-            casePage="assignment"
-            appAlias="${pegaConfig.appAlias}"
-            pegaServerUrl="${pegaConfig.pegaServerUrl}"
-            autoReauth="true"
-            authService="pega"
-            userIdentifier="${pegaConfig.user}"
-            password="${pegaConfig.password}"
-            clientId="${pegaConfig.clientId}"
-            style="width:100%; height:800px;">
-          </pega-embed>
-        `;
-      } catch (error) {
-        console.error("Error:", error);
-        document.getElementById("embedContainer").innerText = "Failed to load assignment.";
-      }
-    }
-
-    window.onload = fetchAssignmentAndEmbed;
-  </script>
+        fetchCaseId();
+</script>
 </body>
 </html>
