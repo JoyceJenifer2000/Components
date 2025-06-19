@@ -6,21 +6,13 @@
 </head>
 <body>
     <script src='https://areteans-i25-plf.pegatsdemo.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js' ></script>
-    <pega-embed id='theEmbed' action='openAssignment' assignmentID='' themeID='pzAries' casePage='assignment' appAlias='finance-redress' pegaServerUrl='https://areteans-i25-plf.pegatsdemo.com/prweb/' autoReauth='true' authService='pega' userIdentifier='Joyce' password='cnVsZXM=' clientId='13718990074089488661' style='width:100%'>
-    </pega-embed>
-    <script>
-        const getCaseIdEndpoint = "https://areteans-i25-plf.pegatsdemo.com/prweb/api/DynamicAssignment/v1/getDynamicId";
-        async function fetchCaseId() {
-                const response = await fetch(getCaseIdEndpoint, {
-                    method: "GET",
-                    header: {}
-                });
-                    const data = await response.json();
-                    const caseId = data.AssignmentID;
-                    let embedElement = document.getElementById('theEmbed');
-                    embedElement.setAttribute("assignmentID", caseId);
-        }
-        fetchCaseId();
+<pega-embed id='theEmbed' action='openAssignment' assignmentID='ASSIGN-WORKLIST ARET-FINANCEREDRESS-WORK C-49051!VERIFYIDENTITY_FLOW' themeID='pzAries' casePage='assignment' appAlias='finance-redress' pegaServerUrl='https://areteans-i25-plf.pegatsdemo.com/prweb/' autoReauth='true' authService='pega' userIdentifier='Joyce' password='cnVsZXM=' clientId='13718990074089488661' style='width:100%'>
+</pega-embed>
+
+<script>
+        var caseId = 'ASSIGN-WORKLIST ARET-FINANCEREDRESS-WORK C-49051!VERIFYIDENTITY_FLOW';
+        let embedElement = document.getElementById('theEmbed');
+        embedElement.setAttribute("assignmentID", caseId);
 </script>
 </body>
 </html>
