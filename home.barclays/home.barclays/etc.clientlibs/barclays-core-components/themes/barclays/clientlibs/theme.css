@@ -1,0 +1,414 @@
+:root {
+    --theme-color-primary: #00aeef;
+    --theme-color-interactive: #006de3;
+    --theme-color-interactive-alt: #005bbe;
+    --theme-color-info: #006de3;
+    --theme-color-info-tint: #e7f0fb;
+    --theme-color-info-tint-light: #f2f8fe;
+    --theme-color-error: #e3000f;
+    --theme-color-error-alt: #b20110;
+    --theme-color-error-tint: #fde7e9;
+    --theme-color-error-tint-light: #fcf3f3;
+    --theme-color-warning: #ffba00;
+    --theme-color-warning-tint: #fff8e7;
+    --theme-color-warning-tint-light: #fff8e7;
+    --theme-color-success: #09821f;
+    --theme-color-success-tint: #e9f4ea;
+    --theme-color-success-tint-light: #f4f9f5;
+    --theme-color-neutral: #515151;
+    --theme-color-neutral-tint: #eee;
+    --theme-color-neutral-tint-light: #f6f6f6;
+    --theme-color-0: #fff;
+    --theme-color-10: #fff;
+    --theme-color-30: #f6f6f6;
+    --theme-color-40: #e2e2e2;
+    --theme-color-50: #8e8e8e;
+    --theme-color-60: #515151;
+    --theme-color-60-tint: #eee;
+    --theme-color-70: #272727;
+    --theme-color-100: #000;
+    --theme-color-0-rgb: 255, 255, 255;
+    --theme-color-10-rgb: 255, 255, 255;
+    --theme-color-30-rgb: 246, 246, 246;
+    --theme-color-40-rgb: 226, 226, 226;
+    --theme-color-50-rgb: 142, 142, 142;
+    --theme-color-60-rgb: 81, 81, 81;
+    --theme-color-60-tint-rgb: 238, 238, 238;
+    --theme-color-70-rgb: 39, 39, 39;
+    --theme-color-100-rgb: 0, 0, 0;
+    --theme-opacity-low: 0.16;
+    --theme-hover-filter-brightness: 0.885;
+    --theme-color-0-fixed: #fff;
+    --theme-color-10-fixed: #fff;
+    --theme-color-40-fixed: #e2e2e2;
+    --theme-color-60-fixed: #515151;
+    --theme-color-70-fixed: #272727;
+    --theme-color-100-fixed: #000;
+    --theme-color-0-fixed-rgb: 255, 255, 255;
+    --theme-color-10-fixed-rgb: 255, 255, 255;
+    --theme-color-40-fixed-rgb: 226, 226, 226;
+    --theme-color-60-fixed-rgb: 81, 81, 81;
+    --theme-color-70-fixed-rgb: 39, 39, 39;
+    --theme-color-100-fixed-rgb: 0, 0, 0;
+    --theme-color-sacred-10: #fff;
+    --theme-color-sacred-70: #272727;
+    --theme-color-sacred-dark: #161b2f;
+    --theme-color-sacred-primary: #00aeef;
+    --theme-color-sacred-info: #001276;
+    --theme-color-sacred-success: #09821f;
+    --theme-alert-border-width: 2px;
+    --theme-arrange-gap: var(--theme-gutter-inner);
+    --theme-badge-text-transform: uppercase;
+    --theme-badge-font-size: 0.875rem;
+    --theme-badge-line-height: 1.125rem;
+    --theme-brand-logo-suffix-position: absolute;
+    --theme-brand-logo-suffix-height-multiplier: 0.8;
+    --theme-brand-logo-height-sm: 1.5rem;
+    --theme-brand-logo-height: 1.875rem;
+    --theme-brand-logo-height-lg: 2.5rem;
+    --theme-brand-logo-gap-sm: 0.3rem;
+    --theme-brand-logo-gap: 0.375rem;
+    --theme-brand-logo-gap-lg: 0.5rem;
+    --theme-brand-logo-color: var(--theme-color-primary);
+    --theme-button-padding-block: 0.625rem;
+    --theme-button-padding-inline: 1.75rem;
+    --theme-button-padding: var(--theme-button-padding-block) var(--theme-button-padding-inline);
+    --theme-button-small-padding: 0.125rem 1rem;
+    --theme-button-small-media-only-padding: 0.125rem;
+    --theme-button-font-size: 1rem;
+    --theme-button-border-width: 2px;
+    --theme-button-border-radius: 99px;
+    --theme-button-media-only-padding: 0.688rem;
+    --theme-button-font-weight: var(--theme-type-font-weight-medium);
+    --theme-chip-padding: 2px 22px;
+    --theme-chip-border-radius: var(--theme-border-radius-sm);
+    --theme-chip-group-shadow-position-top: 2px;
+    --theme-chip-group-shadow-width: 9px;
+    --theme-chip-group-shadow-height: 36px;
+    --theme-control-size: 28px;
+    --theme-control-toggle-width: 50px;
+    --theme-control-radio-indicator-size: 16px;
+    --theme-control-border-radius: 4px;
+    --theme-control-pane-border-radius: 8px;
+    --theme-pane-label-padding: var(--theme-spacing-md);
+    --theme-control-pane-label-background-color: var(--theme-color-10);
+    --theme-control-pane-border-top-radius: var(--theme-control-pane-border-radius);
+    --theme-control-pane-border-bottom-radius: var(--theme-control-pane-border-radius);
+    --theme-drawer-z-index: 90;
+    --theme-form-field-padding-x: 12px;
+    --theme-form-field-nested-button-padding-x: 12px;
+    --theme-form-field-padding-y: 11px;
+    --theme-form-field-border-radius: var(--theme-border-radius-sm);
+    --theme-form-item-dropdown-z-index: 50;
+    --theme-ghost-border-radius: 4px;
+    --theme-ghost-button-height: calc(var(--theme-button-font-size)*1.5 + var(--theme-button-padding-block)*2 + var(--theme-button-border-width)*2);
+    --theme-header-box-shadow: 0 -6px 16px rgba(0, 0, 0, .2);
+    --theme-header-logo-width: 1.625rem;
+    --theme-header-logo-height: 1.75rem;
+    --theme-header-wordmark-height: 1.5rem;
+    --theme-header-menu-size: 1.5rem;
+    --theme-header-z-index: 80;
+    --theme-header-link-border-width: 0.25rem;
+    --theme-hero-aperture-width: 0;
+    --theme-hero-aperture-background-color: transparent;
+    --theme-hero-aperture-border-radius: 0;
+    --theme-hero-aperture-gap: 0;
+    --theme-hero-icon-top: 0;
+    --theme-hero-icon-display: none;
+    --theme-hero-icon-color: transparent;
+    --theme-hero-max-width: 1440px;
+    --theme-hero-portal-width: var(--theme-portal-border-width);
+    --theme-hero-portal-width-md: var(--theme-portal-border-width-md);
+    --theme-hero-portal-width-lg: var(--theme-portal-border-width-lg);
+    --theme-icon-size-2xs: 0.75rem;
+    --theme-icon-size-xs: 1rem;
+    --theme-icon-size-sm: 1.5rem;
+    --theme-icon-size-md: 2rem;
+    --theme-icon-size-lg: 3rem;
+    --theme-icon-size-xl: 4rem;
+    --theme-icon-size-2xl: 5rem;
+    --theme-icon-fill: var(--theme-color-70);
+    --theme-icon-fill-secondary: var(--theme-color-10);
+    --theme-insight-chevron-background-rgba: hsla(0, 0%, 100%, .2);
+    --theme-link-margin: 0;
+    --theme-link-min-width: 2.75rem;
+    --theme-link-secondary-color: var(--theme-color-70);
+    --theme-list-marker-size: 0.375rem;
+    --theme-loading-size-sm: 24px;
+    --theme-loading-size-md: 32px;
+    --theme-loading-size-lg: 64px;
+    --theme-menu-icon-size: 1.5rem;
+    --theme-modal-z-index: 100;
+    --theme-nav-width: 21em;
+    --theme-nav-padding-top: var(--theme-spacing-lg);
+    --theme-nav-padding-inline: var(--theme-gutter-outer);
+    --theme-nav-border-width: 0;
+    --theme-nav-logo-width: 1.625rem;
+    --theme-nav-logo-height: 1.75rem;
+    --theme-nav-wordmark-height: 1.5rem;
+    --theme-nav-actions-menu-display: flex;
+    --theme-nav-list-transition: none;
+    --theme-nav-list-transform: none;
+    --theme-navbar-padding-block: var(--theme-spacing-md);
+    --theme-notification-border-color: var(--theme-color-10);
+    --theme-notification-border-width: 1px;
+    --theme-notification-min-size: 1.125rem;
+    --theme-notification-empty-min-size: 0.75rem;
+    --theme-page-z-index: 80;
+    --theme-pagination-button-padding: 2px var(--theme-spacing-2xs);
+    --theme-pagination-button-media-padding: 2px 0.125rem;
+    --theme-progress-bar-border-width: 1px;
+    --theme-progress-bar-size: 4px;
+    --theme-progress-bar-border-radius: var(--theme-border-radius-sm);
+    --theme-progress-marker-size: 16px;
+    --theme-segmented-navigation-border-radius: 1.125rem;
+    --theme-vertical-separator-height: 32px;
+    --theme-vertical-separator-width: 1px;
+    --theme-tab-border-width: 4px;
+    --theme-ticker-tape-padding-inline: 0.2em;
+    --theme-tile-logo-size: 72px;
+    --theme-timer-border-radius: var(--theme-border-radius-xl);
+    --theme-border-radius: 0.5rem;
+    --theme-border-radius-sm: 0.25rem;
+    --theme-border-radius-lg: 0.75rem;
+    --theme-border-radius-xl: 1rem;
+    --theme-border-width: 2px;
+    --theme-focus-width: 2px;
+    --theme-focus-box-shadow: 0 0 0 2px var(--theme-color-10), 0 0 0 4px var(--theme-color-interactive);
+    --theme-focus-hover-box-shadow: 0 0 0 2px var(--theme-color-10), 0 0 0 4px var(--theme-color-interactive-alt);
+    --theme-gutter-inner: 0.5rem;
+    --theme-gutter-outer: 1.5rem;
+    --theme-gutter-margin-left: auto;
+    --theme-max-width: 80rem;
+    --theme-portal-border-width: 8px;
+    --theme-portal-border-width-md: 16px;
+    --theme-portal-border-width-lg: 56px;
+    --theme-raised-box-shadow: 0 0 1.25rem rgba(var(--theme-color-70-rgb), 0.2);
+    --theme-spacing-3xs: 0.125rem;
+    --theme-spacing-2xs: 0.25rem;
+    --theme-spacing-xs: 0.5rem;
+    --theme-spacing-sm: 0.75rem;
+    --theme-spacing-md: 1rem;
+    --theme-spacing-lg: 1.5rem;
+    --theme-spacing-xl: 2rem;
+    --theme-spacing-2xl: 2.5rem;
+    --theme-spacing-3xl: 3.5rem;
+    --theme-spacing-4xl: 4.5rem;
+    --theme-spacing-5xl: 5rem;
+    --theme-spacing-6xl: 7.5rem;
+    --theme-transition-duration-extra-fast: 0;
+    --theme-transition-duration-fast: 0;
+    --theme-transition-duration-medium: 0;
+    --theme-transition-duration-slow: 0;
+    --theme-transition-duration-extra-slow: 0;
+    --theme-transition-delay: 0;
+    --theme-transition-scroll-behavior: auto;
+    --theme-type-font-family: "Barclays Effra", Arial, sans-serif;
+    --theme-type-heading-font-family: var(--theme-type-font-family);
+    --theme-type-button-font-family: var(--theme-type-font-family);
+    --theme-type-font-size: 1rem;
+    --theme-type-font-size-xs: 0.75rem;
+    --theme-type-font-size-sm: 0.875rem;
+    --theme-type-font-size-md: 1.125rem;
+    --theme-type-font-size-lg: 1.25rem;
+    --theme-type-font-size-xl: 1.5rem;
+    --theme-type-font-size-2xl: 2rem;
+    --theme-type-font-size-3xl: 3rem;
+    --theme-type-font-weight-light: 300;
+    --theme-type-font-weight: 400;
+    --theme-type-font-weight-medium: 500;
+    --theme-type-font-weight-bold: 700;
+    --theme-type-line-height: 1.375rem;
+    --theme-type-line-height-xs: 1rem;
+    --theme-type-line-height-sm: 1.125rem;
+    --theme-type-line-height-md: 1.375rem;
+    --theme-type-line-height-lg: 1.5rem;
+    --theme-type-line-height-xl: 1.75rem;
+    --theme-type-line-height-2xl: 2.25rem;
+    --theme-type-line-height-3xl: 3.25rem;
+    --theme-type-letter-spacing-xs: 0.003rem;
+    --theme-type-letter-spacing-md: -0.0045rem;
+    --theme-type-letter-spacing-lg: -0.01rem;
+    --theme-type-letter-spacing-xl: -0.018rem;
+    --theme-type-letter-spacing-2xl: -0.032rem;
+    --theme-type-letter-spacing-3xl: -0.072rem;
+    --theme-type-color: var(--theme-color-60);
+    --theme-type-heading-color: var(--theme-color-70);
+    --theme-type-margin-bottom: var(--theme-spacing-md);
+    --theme-type-margin-bottom-lg: var(--theme-spacing-lg);
+    --theme-type-margin-bottom-xl: var(--theme-spacing-xl);
+    --theme-type-margin-bottom-sm: var(--theme-spacing-sm);
+    --theme-type-margin-bottom-xs: var(--theme-spacing-xs);
+    --theme-type-margin-bottom-2xs: var(--theme-spacing-2xs)
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --theme-color-primary: #00aeef;
+        --theme-color-interactive: #3696fc;
+        --theme-color-interactive-alt: #0d81fb;
+        --theme-color-info: #3696fc;
+        --theme-color-info-tint: #192744;
+        --theme-color-info-tint-light: #1c253c;
+        --theme-color-error: #ff5b4b;
+        --theme-color-error-alt: #b20110;
+        --theme-color-error-tint: #2d1f30;
+        --theme-color-error-tint-light: #281f2e;
+        --theme-color-warning: #ffc21c;
+        --theme-color-warning-tint: #2d2c2d;
+        --theme-color-warning-tint-light: #29282d;
+        --theme-color-success: #32d74b;
+        --theme-color-success-tint: #192e32;
+        --theme-color-success-tint-light: #1c2930;
+        --theme-color-neutral: #b9c9ed;
+        --theme-color-neutral-tint: #262c42;
+        --theme-color-neutral-tint-light: #262939;
+        --theme-color-0: #000;
+        --theme-color-10: #161b2f;
+        --theme-color-30: #292b3d;
+        --theme-color-40: #646774;
+        --theme-color-50: #979aa3;
+        --theme-color-60: #cbccd1;
+        --theme-color-60-tint: #262c42;
+        --theme-color-70: #fff;
+        --theme-color-100: #fff;
+        --theme-color-0-rgb: 0, 0, 0;
+        --theme-color-10-rgb: 22, 27, 47;
+        --theme-color-30-rgb: 36, 43, 76;
+        --theme-color-40-rgb: 42, 49, 82;
+        --theme-color-50-rgb: 94, 98, 123;
+        --theme-color-60-rgb: 203, 204, 209;
+        --theme-color-60-tint-rgb: 38, 44, 66;
+        --theme-color-70-rgb: 255, 255, 255;
+        --theme-color-100-rgb: 255, 255, 255;
+        --theme-opacity-low: 0.84;
+        --theme-hover-filter-brightness: 0.785
+    }
+}
+
+@media screen and (forced-colors:active) {
+    :root {
+        --theme-icon-fill: windowText
+    }
+}
+
+@media (min-width:40.001em) {
+    :root {
+        --theme-gutter-inner: 1rem;
+        --theme-gutter-outer: 3rem
+    }
+}
+
+@media (min-width:60.001em) {
+    :root {
+        --theme-gutter-inner: 1.5rem;
+        --theme-gutter-outer: 1.5rem;
+        --theme-type-font-size-md: 1.25rem;
+        --theme-type-font-size-lg: 1.5rem;
+        --theme-type-font-size-xl: 2rem;
+        --theme-type-font-size-2xl: 3rem;
+        --theme-type-font-size-3xl: 5rem;
+        --theme-type-line-height: 1.5rem;
+        --theme-type-line-height-xs: 1.125rem;
+        --theme-type-line-height-sm: 1.25rem;
+        --theme-type-line-height-md: 1.5rem;
+        --theme-type-line-height-lg: 2rem;
+        --theme-type-line-height-xl: 2.375rem;
+        --theme-type-line-height-2xl: 3.375rem;
+        --theme-type-line-height-3xl: 5.25rem;
+        --theme-type-letter-spacing-md: -0.005rem;
+        --theme-type-letter-spacing-lg: -0.018rem;
+        --theme-type-letter-spacing-xl: -0.032rem;
+        --theme-type-letter-spacing-2xl: -0.072rem;
+        --theme-type-letter-spacing-3xl: -0.16rem
+    }
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        --theme-transition-duration-extra-fast: 75ms;
+        --theme-transition-duration-fast: 120ms;
+        --theme-transition-duration-medium: 150ms;
+        --theme-transition-duration-slow: 300ms;
+        --theme-transition-duration-extra-slow: 500ms;
+        --theme-transition-delay: 120ms;
+        --theme-transition-scroll-behavior: smooth
+    }
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-weight: 300;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-light.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-light.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-style: italic;
+    font-weight: 300;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-light-italic.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-light-italic.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-weight: 400;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-regular.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-style: italic;
+    font-weight: 400;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-regular-italic.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-regular-italic.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-weight: 500;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-medium.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-medium.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-style: italic;
+    font-weight: 500;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-medium-italic.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-medium-italic.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-weight: 700;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-bold.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-bold.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Barclays Effra;
+    font-style: italic;
+    font-weight: 700;
+    src: local("Barclays Effra"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-bold-italic.woff) format("woff"), url(../../../clientlibs/clientlib-ui/bp_v0/themes/barclays/scl-ui_v1.assets/resources/fonts/effra-bold-italic.woff2) format("woff2")
+}
+
+body {
+    margin: unset
+}
+
+[_status=initial] {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    border: 0;
+    clip-path: inset(50%);
+    white-space: nowrap
+}

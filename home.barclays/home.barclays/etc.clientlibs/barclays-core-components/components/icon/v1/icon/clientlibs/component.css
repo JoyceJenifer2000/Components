@@ -1,0 +1,110 @@
+.c-icon {
+    display: inline-block;
+    transition: transform var(--theme-transition-duration-medium) ease-out;
+    vertical-align: middle
+}
+
+.c-icon,
+.c-icon__svg {
+    height: 100%;
+    width: 100%;
+    fill: var(--theme-icon-fill)
+}
+
+.c-icon__svg {
+    display: flex
+}
+
+.c-icon--2xs {
+    height: var(--theme-icon-size-2xs);
+    width: var(--theme-icon-size-2xs)
+}
+
+.c-icon--xs {
+    height: var(--theme-icon-size-xs);
+    width: var(--theme-icon-size-xs)
+}
+
+.c-icon--sm {
+    height: var(--theme-icon-size-sm);
+    width: var(--theme-icon-size-sm)
+}
+
+.c-icon--md {
+    height: var(--theme-icon-size-md);
+    width: var(--theme-icon-size-md)
+}
+
+.c-icon--lg {
+    height: var(--theme-icon-size-lg);
+    width: var(--theme-icon-size-lg)
+}
+
+.c-icon--xl {
+    height: var(--theme-icon-size-xl);
+    width: var(--theme-icon-size-xl)
+}
+
+.c-icon--2xl {
+    height: var(--theme-icon-size-2xl);
+    width: var(--theme-icon-size-2xl)
+}
+
+.c-icon--sm-and-md {
+    height: var(--theme-icon-size-sm);
+    width: var(--theme-icon-size-sm)
+}
+
+.c-icon--info {
+    --theme-icon-fill: var(--theme-color-info);
+    --theme-icon-fill-secondary: var(--theme-color-sacred-10)
+}
+
+.c-icon--success {
+    --theme-icon-fill: var(--theme-color-success);
+    --theme-icon-fill-secondary: var(--theme-color-sacred-10)
+}
+
+.c-icon--warning {
+    --theme-icon-fill: var(--theme-color-warning);
+    --theme-icon-fill-secondary: var(--theme-color-sacred-70)
+}
+
+.c-icon--error {
+    --theme-icon-fill: var(--theme-color-error);
+    --theme-icon-fill-secondary: var(--theme-color-sacred-10)
+}
+
+.c-icon--disabled {
+    --theme-icon-fill: var(--theme-color-50)
+}
+
+.c-icon--inverse {
+    --theme-icon-fill: var(--theme-color-40)
+}
+
+.c-icon--ghost {
+    --theme-icon-fill: var(--theme-color-sacred-10);
+    --theme-icon-fill-secondary: var(--theme-color-50)
+}
+
+.c-icon--rotate-90 {
+    transform: rotate(90deg)
+}
+
+.c-icon--rotate-180 {
+    transform: rotate(180deg)
+}
+
+@media (min-width:40.001em) {
+    .c-icon--sm-and-md {
+        height: var(--theme-icon-size-md);
+        width: var(--theme-icon-size-md)
+    }
+}
+
+@media screen and (forced-colors:active) {
+    .c-icon {
+        --theme-icon-fill-secondary: Canvas
+    }
+}

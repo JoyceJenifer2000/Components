@@ -1,0 +1,10 @@
+.c-logo-group {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--theme-spacing-md)
+}
+
+.c-logo-group--spacing-xl-top-only {
+    margin-top: var(--theme-spacing-xl)
+}

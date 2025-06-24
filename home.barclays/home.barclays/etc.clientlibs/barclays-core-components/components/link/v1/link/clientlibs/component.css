@@ -1,0 +1,234 @@
+.c-link {
+    --c-link-text-color: var(--theme-color-interactive);
+    --c-link-media-color: var(--theme-color-interactive);
+    --c-link-media-background: transparent;
+    --c-link-media-border: 0;
+    --c-link-media-padding: 0;
+    --c-link-notification-right: auto;
+    --c-link-notification-left: 75%;
+    --c-link-notification-translate-x: calc(var(--theme-notification-min-size)*-0.5);
+    background-color: transparent;
+    border: 0;
+    color: var(--theme-color-interactive);
+    color: var(--c-link-text-color);
+    cursor: pointer;
+    font-family: var(--theme-type-font-family);
+    font-size: var(--theme-type-font-size);
+    font-weight: var(--theme-type-font-weight-medium);
+    line-height: var(--theme-type-line-height);
+    margin: var(--theme-link-margin);
+    padding: 0;
+    text-align: left;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.c-link--inline-block {
+    display: inline-block
+}
+
+.c-link:focus {
+    background-color: var(--theme-color-10);
+    box-shadow: var(--theme-focus-box-shadow);
+    outline: var(--theme-focus-width) solid transparent;
+    outline-offset: var(--theme-focus-width)
+}
+
+.c-link:hover {
+    filter: brightness(var(--theme-hover-filter-brightness))
+}
+
+.c-link:focus:hover {
+    box-shadow: var(--theme-focus-hover-box-shadow)
+}
+
+.c-link--no-decoration {
+    -webkit-text-decoration: none;
+    text-decoration: none
+}
+
+.c-link--secondary,
+.c-link--secondary:hover {
+    --c-link-text-color: var(--theme-link-secondary-color);
+    --c-link-media-color: var(--theme-link-secondary-color)
+}
+
+.c-link--danger,
+.c-link--danger:hover {
+    --c-link-text-color: var(--theme-color-error);
+    --c-link-media-color: var(--theme-color-error)
+}
+
+.c-link[aria-disabled=true],
+.c-link[aria-disabled=true]:focus,
+.c-link[aria-disabled=true]:hover,
+.c-link[disabled],
+.c-link[disabled]:hover {
+    --c-link-media-border: 2px solid var(--theme-color-50);
+    --c-link-media-background: var(--theme-color-30);
+    --c-link-media-color: var(--theme-color-50);
+    --c-link-text-color: var(--theme-color-50);
+    box-shadow: none;
+    cursor: not-allowed;
+    filter: brightness(1)
+}
+
+.c-link--inverse {
+    --c-link-text-color: var(--theme-color-10);
+    --c-link-media-color: var(--theme-color-10)
+}
+
+.c-link--inverse:focus {
+    --c-link-text-color: var(--theme-color-interactive);
+    --c-link-media-color: var(--theme-color-interactive)
+}
+
+.c-link--inverse:focus:hover {
+    --c-link-text-color: var(--theme-color-interactive-alt);
+    --c-link-icon-color: var(--theme-color-interactive-alt);
+    box-shadow: var(--theme-focus-hover-box-shadow)
+}
+
+.c-link--size-md {
+    font-size: var(--theme-type-font-size-md);
+    line-height: var(--theme-type-line-height-md)
+}
+
+.c-link--size-lg {
+    font-size: var(--theme-type-font-size-lg);
+    line-height: var(--theme-type-line-height-lg)
+}
+
+.c-link__media {
+    --theme-icon-fill: currentColor;
+    color: var(--c-link-media-color);
+    display: inline-block;
+    position: relative
+}
+
+.c-link__notification {
+    display: flex;
+    left: var(--c-link-notification-left);
+    position: absolute;
+    right: var(--c-link-notification-right);
+    top: 0;
+    transform: translateX(var(--c-link-notification-translate-x))
+}
+
+.c-link--media-right {
+    --c-link-notification-right: 25%;
+    --c-link-notification-left: auto;
+    --c-link-notification-translate-x: calc(var(--theme-notification-min-size)/2);
+    align-items: center;
+    display: inline-flex
+}
+
+.c-link--media-right .c-link__media {
+    margin-left: var(--theme-spacing-2xs);
+    order: 1
+}
+
+.c-link--media-right-inline {
+    padding-right: calc(var(--theme-icon-size-sm) + var(--theme-spacing-2xs))
+}
+
+.c-link--media-right-inline .c-link__media {
+    display: inline-block;
+    margin-left: calc(var(--theme-icon-size-sm)*-1);
+    transform: translateX(calc(var(--theme-icon-size-sm) + var(--theme-spacing-2xs)))
+}
+
+.c-link--media-left {
+    align-items: center;
+    display: inline-flex
+}
+
+.c-link--media-left .c-link__media {
+    margin-right: var(--theme-spacing-2xs);
+    order: -1
+}
+
+.c-link--media-top {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column
+}
+
+.c-link--media-top .c-link__media {
+    margin-bottom: var(--theme-spacing-2xs);
+    order: -1
+}
+
+.c-link--media-only {
+    display: inline-flex;
+    justify-content: center;
+    min-width: var(--theme-link-min-width)
+}
+
+.c-link--media-only .c-link__text {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    white-space: nowrap
+}
+
+.c-link--media-only .c-link__media {
+    align-items: center;
+    display: inline-flex
+}
+
+.c-link--media-fill {
+    display: flex;
+    justify-content: space-between
+}
+
+@media (max-width:40em) {
+    .c-link--media-only-md-down .c-link__text {
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        clip: rect(0, 0, 0, 0);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        white-space: nowrap
+    }
+    .c-link--media-only-md-down .c-link__media {
+        margin-left: 0;
+        margin-right: 0
+    }
+}
+
+@media (max-width:60em) {
+    .c-link--stacked-lg-down {
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column
+    }
+    .c-link--stacked-lg-down .c-link__media {
+        margin-bottom: var(--theme-spacing-2xs);
+        margin-left: 0;
+        margin-right: 0;
+        order: -1;
+        transform: none
+    }
+    .c-link--stacked-lg-down .c-link__text {
+        text-align: center
+    }
+}
+
+@media screen and (forced-colors:active) {
+    .c-link,
+    .c-link:hover {
+        --theme-icon-fill: linkText;
+        --c-link-text-color: linkText;
+        --c-link-media-color: linkText
+    }
+}
